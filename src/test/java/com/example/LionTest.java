@@ -23,7 +23,6 @@ public class LionTest {
     public LionTest(String sex,boolean expHasMane) {
         this.sex = sex;
         this.expHasMane = expHasMane;
-        this.feline = feline;
     }
 
     @Parameterized.Parameters
