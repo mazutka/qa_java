@@ -6,8 +6,6 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.List;
-
 import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -17,7 +15,7 @@ public class FelineTest {
     Feline feline;
     @Test
     public void eatMeat() throws Exception {
-        List<String> actResult = feline.eatMeat();
+        feline.eatMeat();
         Mockito.verify(feline, Mockito.times(1)).getFood("Хищник");
     }
 
@@ -30,7 +28,7 @@ public class FelineTest {
 
     @Test
     public void getKittensWithOutParams() {
-        int actResult = feline.getKittens();
+        feline.getKittens();
         Mockito.verify(feline,Mockito.times(1)).getKittens(1);
     }
 

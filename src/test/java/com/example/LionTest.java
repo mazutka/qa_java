@@ -8,8 +8,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -40,7 +38,7 @@ public class LionTest {
 
     @Test(expected = Exception.class)
     public void LionTestWithUndefinedSex() throws Exception {
-        Lion lion = new Lion("Конь в пальто", feline);
+        new Lion("Конь в пальто", feline);
     }
     @Test
     public void getKittens() throws Exception {
@@ -62,7 +60,7 @@ public class LionTest {
     @Test
     public void getFood() throws Exception {
         Lion lion = new Lion(sex,feline);
-        List<String> actResult = lion.getFood();
+        lion.getFood();
         Mockito.verify(feline,Mockito.times(1)).getFood("Хищник");
     }
 }
